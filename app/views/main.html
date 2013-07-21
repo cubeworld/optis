@@ -1,0 +1,16 @@
+<div class="hero-unit">
+  <h1>Sprzęt</h1>
+  <a href="#/new"><i class="icon-plus-sign">Nowy</i></a>
+  <ul>
+      	<li ng-repeat="thing in awesomeThings">
+			<img ng-src="{{thing.image}}"/>
+			{{thing.name}}
+			<a><i ng-click="deleteThing($index)" class="icon-plus-sign">Usuń</i></a>
+		</li>
+  </ul>
+  <form ng-submit="add()">
+			<input type="text" ng-model="thingText"  size="30"
+	               placeholder="dodaj nowy sprzęt">
+	        <input class="btn-primary" type="submit" value="Dodaj">
+  </form>
+</div>
